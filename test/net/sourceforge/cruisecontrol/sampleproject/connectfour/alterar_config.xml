@@ -1,0 +1,26 @@
+<cruisecontrol>
+  <project name="MeuProjeto">
+    <schedule interval="30" />
+    <sourcecontrol type="manual">
+      <!-- Aqui você configuraria o repositório real -->
+    </sourcecontrol>
+    <build type="ant">
+      <buildFile>build.xml</buildFile>
+    </build>
+    <publishers>
+      <htmlpublisher>
+        <reportdir>reports</reportdir>
+        <reportfiles>
+          <file>test-report.html</file>
+        </reportfiles>
+      </htmlpublisher>
+    </publishers>
+  </project>
+</cruisecontrol>
+
+
+
+
+
+
+

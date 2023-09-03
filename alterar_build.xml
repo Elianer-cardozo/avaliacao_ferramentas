@@ -1,0 +1,25 @@
+<project name="MeuProjeto" default="test">
+  <target name="compile">
+    <javac srcdir="src" destdir="bin" />
+  </target>
+  
+  <target name="test" depends="compile">
+    <junit printsummary="yes">
+      <classpath>
+        <pathelement location="bin" />
+      </classpath>
+      <batchtest todir="reports">
+        <fileset dir="test">
+          <include name="**/*Test.class" />
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+</project>
+
+
+
+
+
+
+
